@@ -10,17 +10,18 @@
         // 是否开启
         enable: true,
         // clientID
-        clientID: "a8296833d44633072517",
+        clientID: "c53de9cc581356de3271",
         // clientSecret
-        clientSecret: "8af7efce84642c54ce9e6206fd1da2b01952a3d1",
+        clientSecret: "e233c1f4878512622e31e27e86f17d53a09a0ab4",
         // 评论项目名
         repo: 'blog-comments',
-        owner: 'JexLau',
-        admin: ['JexLau'],
-        githubID:'JexLau',
+        owner: 'nans',
+        admin: ['nans'],
+        githubID:'nans',
         id: decodeURI(window.location.pathname),
         language:'zh-CN',
-        distractionFreeMode: true
+        distractionFreeMode: true,
+        proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'  //避免跨域
       };
       const gitalk = new Gitalk(commentConfig);
       gitalk.render("gitalk-container");
