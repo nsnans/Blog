@@ -21,7 +21,9 @@
         id: decodeURI(window.location.pathname),
         language:'zh-CN',
         distractionFreeMode: true,
-        proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'  //避免跨域
+        // proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'  //避免跨域
+        proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token'
+        
       };
       const gitalk = new Gitalk(commentConfig);
       gitalk.render("gitalk-container");
