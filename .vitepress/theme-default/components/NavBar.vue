@@ -4,12 +4,12 @@
     :aria-label="$site.title + ', back to home'"
     :href="$site.base"
   >
-    <img
+    <!-- <img
       class="logo"
       v-if="$theme.logo"
       :src="withBase($theme.logo)"
       alt="logo"
-    />
+    /> -->
     <span>{{ $site.title }}</span>
   </a>
   <div class="flex-grow"></div>

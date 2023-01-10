@@ -1,6 +1,6 @@
 <template>
   <div id="containerColor" :class="[pageClasses, themeMode]">
-    <header class="navbar" v-if="showNavbar">
+    <header class="navbar useselect-none" v-if="showNavbar">
       <NavBar>
         <template #search>
           <slot name="navbar-search" />
@@ -8,7 +8,7 @@
       </NavBar>
       <ToggleSideBarButton @toggle="toggleSidebar" />
     </header>
-    <aside :class="{ open: openSideBar }">
+    <aside :class="{ open: openSideBar }" class="useselect-none">
       <SideBar>
         <template #top>
           <slot name="sidebar-top" />
@@ -18,7 +18,7 @@
         </template>
       </SideBar>
     </aside>
-    <div class="home-bg" v-if="enableHome">
+    <div class="home-bg useselect-none" v-if="enableHome">
       <div class="content-bg">
         <h1>
           <p>人间总有一两风 填我十万八千梦</p>
@@ -54,7 +54,7 @@
     <div class="theme-select">
       <ul>
         <li @click="modeSelect('theme')" :class="themeMode == 'theme' ? 'active' : ''">☀️</li>
-        <li @click="modeSelect('theme themeDark')" :class="themeMode !== 'theme' ? 'active' : ''">🌑</li>
+        <li @click="modeSelect('theme themeDark')" :class="themeMode !== 'theme' ? 'active' : ''">🌙</li>
       </ul>
     </div>
   </div>
@@ -111,14 +111,16 @@ export default {
           },
           {
             icon: "icon-github",
-            link: "https://github.com/jexlau",
+            link: "https://github.com/nsnans",
             event: false,
           },
         ],
-        nickName: "纪年",
-        skill: ["👹 日语", "🖋️ 练字", "🍵 喝茶"],
+        nickName: "南笙",
+        skill: ["Vue", "React",],
         synopsis:
-          "19年毕业的程序媛，目前在巩固前端基础，简单的事情重复做，重复的事情用心做。",
+          `精通 Ai、Fw、Fl、Br、Ae、Pr、Id、Ps 等软件的安装与卸载，
+          精通 CSS、JavaScript、TypeScript、PHP、ASP、C、C++、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal 等单词的拼写，
+          熟悉 Windows、Linux、OS X、Android、iOS、WP8 等系统的开关机。`,
       },
     };
   },
@@ -204,6 +206,12 @@ export default {
 };
 </script>
 <style scoped>
+.useselect-none{
+  user-select: none;
+}
+#containerColor{
+  /* user-select: none; */
+}
 @media screen and (max-width: 1200px) {
   .content-bg,
   .home-bg {
@@ -272,6 +280,7 @@ export default {
   top: 0.86rem;
   right: 0.5rem;
   z-index: 10;
+  border-radius: 0.5rem;
 }
 ul,
 li {

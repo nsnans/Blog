@@ -202,6 +202,7 @@ export default {
   color: var(--text-color);
 }
 .nickName {
+  text-align: center;
   color: var(--text-color-light);
   margin: 0;
   height: 40px;
