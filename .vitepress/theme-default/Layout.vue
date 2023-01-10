@@ -18,13 +18,13 @@
         </template>
       </SideBar>
     </aside>
-    <div class="home-bg useselect-none" v-if="enableHome">
+    <!-- <div class="home-bg useselect-none" v-if="enableHome">
       <div class="content-bg">
         <h1>
           <p>人间总有一两风 填我十万八千梦</p>
         </h1>
       </div>
-    </div>
+    </div> -->
     <!-- TODO: make this button accessible -->
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
     <main class="home" aria-labelledby="main-title" v-if="enableHome">

@@ -1,18 +1,18 @@
 <template>
   <div>
-    <footer class="page-edit">
+    <!-- <footer class="page-edit">
       <a v-for="(item,index) in data.platform" :key="index" :href="item.href">
         <img class="imgIcon" :src="item.icon" />
       </a>
-    </footer>
-    <p class="platform">
+    </footer> -->
+    <!-- <p class="platform">
       以上皆为
       <a href="javascript:;">纪年</a> 文章发布平台
-    </p>
-    <p class="platform">
+    </p> -->
+    <!-- <p class="platform">
       Copyright &copy; 2020-2021
       <a href="https://github.com/jexlau">@JexLau</a>
-    </p>
+    </p> -->
   </div>
 </template>
 

@@ -1,5 +1,18 @@
 <template>
-  <div class="header">{{ selectTag }}</div>
+  <!-- <div class="header">{{ selectTag }}</div> -->
+  
+
+  <div class="tags">
+    <span
+      @click="toggleTag(key)"
+      v-for="(item, key, index) in data"
+      class="tag"
+      :class="selectTag==key && 'bgc' "
+      :key="index + key"
+    >
+      {{ key }}
+    </span>
+  </div>
   <a
     v-show="!article.frontMatter.home"
     :href=" base + article.regularPath || ''"
@@ -10,19 +23,8 @@
     <div class="title">
       {{ article.frontMatter.title || "" }}
     </div>
-    <div class="date">{{ article.frontMatter.date.slice(5) || "" }}</div>
+    <div class="date">{{ article.frontMatter.date || "" }}</div>
   </a>
-
-  <div class="tags">
-    <span
-      @click="toggleTag(key)"
-      v-for="(item, key, index) in data"
-      class="tag"
-      :key="index + key"
-    >
-      {{ key }}
-    </span>
-  </div>
 </template>
 
 <script>
@@ -58,6 +60,9 @@
 </script>
 
 <style scoped>
+.bgc{
+  background-color: red !important;
+}
   .header {
     color: var(--text-color);
     font-size: 2rem;

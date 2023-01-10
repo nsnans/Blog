@@ -13,7 +13,7 @@ async function getConfig() {
         },
       ],
       ["meta", { name: "keywords", content: "纪年" }],
-      ["link", { rel: "icon", href: "/favicon.ico" }],
+      // ["link", { rel: "icon", href: "/favicon.ico" }],
       // 引入 Gitalk
       [
         "link",
@@ -22,6 +22,9 @@ async function getConfig() {
           href: "https://lib.baomitu.com/gitalk/1.7.0/gitalk.min.css",
         },
       ],
+
+      ['link', { rel: 'icon', href: '/favicon.ico' }],
+
       ["script", { src: "https://lib.baomitu.com/gitalk/1.7.0/gitalk.min.js" }],
       ["script", { src: "https://lib.baomitu.com/axios/0.21.1/axios.js" }],
     ],
